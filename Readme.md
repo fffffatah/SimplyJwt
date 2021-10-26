@@ -25,15 +25,18 @@ class Demo{
         //myClaims is a set of key value pair where Key is claim type and Value is claim value
         var myClaims = new Dictionary<string, string>();
         myClaims.Add("Id","1234");
-        myClaims.Add("Type","Admin");
+        myClaims.Add("UType","Admin");
         var jwtToken = _authProvider.GenerateJsonWebToken(myClaims);
+        /*jwtToken contains an encrypted string that holds your claims
+          you can store the token on the client side and pass it with every request.
+        */
     }
     public void Validate(string jwtToken){
         var keys = new List<string>();
         keys.Add("Id");
-        keys.Add("Admin");
+        keys.Add("UType");
         var myClaims = _authProvider.ValidateToken(jwtToken, keys);
-        //myClaims is a Dictionary that holds your claims. It will be null if the token is expired or invalid. 
+        //myClaims is a Dictionary that holds your extracted claims from jwtToken. It will be null if the token is expired or invalid. 
     }
 }
 ```
