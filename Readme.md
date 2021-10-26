@@ -2,8 +2,11 @@
 
 This is a simple JWT implementation that can be used in various .NET 5.0 web projects. This class library uses 'System.IdentityModel.Tokens.Jwt' and 'Microsoft.IdentityModel.Tokens' for token generation and validation.
 ## How to Use
-First, add the package to your project and navigate to 'Startup.cs'.
->Add the following line inside 'ConfigureServices' method.
+First, add the package to your project via Nuget Package manager or running the following command in project directory.
+```sh
+Install-Package fffffatah.SimplyJwt -Version 1.0.0
+```
+>Navigate to 'Startup.cs' and add the following line inside 'ConfigureServices' method.
 ```cs
 services.AddScoped<IAuthProvider, AuthProvider>(x => {
                                                         return new AuthProvider("YOUR_JWT_KEY", "JWT_ISSUER", 10);
