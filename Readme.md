@@ -4,7 +4,7 @@ This is a simple JWT implementation that can be used in various .NET 5.0 web pro
 ## How to Use
 First, add the package to your project via Nuget Package manager or running the following command in project directory.
 ```sh
-Install-Package fffffatah.SimplyJwt -Version 1.0.0
+Install-Package fffffatah.SimplyJwt -Version 1.0.1
 ```
 >Navigate to 'Startup.cs' and add the following line inside 'ConfigureServices' method.
 ```cs
