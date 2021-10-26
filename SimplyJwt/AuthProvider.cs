@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SimplyJwt
 {
-    class AuthProvider
+    class AuthProvider : IAuthProvider
     {
         private AuthConfigModel authConfig;
         public AuthProvider(string jwtKey, string jwtIssuer, int timeout)

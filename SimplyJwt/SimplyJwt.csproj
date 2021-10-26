@@ -8,6 +8,7 @@
     <PackageId>fffffatah.SimplyJwt</PackageId>
     <Description>Simple JWT implementation for .NET projects.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/fffffatah/SimplyJwt</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
