@@ -30,7 +30,7 @@ namespace SimplyJwt
                 iterator++;
             }
             var token = new JwtSecurityToken(authConfig.JwtIssuer,
-              Environment.GetEnvironmentVariable("JWT_ISSUER"),
+              authConfig.JwtIssuer,
               claims,
               //ADD TOKEN TIMEOUT
               expires: DateTime.Now.AddMinutes(authConfig.Timeout),
