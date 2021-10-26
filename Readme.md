@@ -26,13 +26,13 @@ class Demo{
         var myClaims = new Dictionary<string, string>();
         myClaims.Add("Id","1234");
         myClaims.Add("Type","Admin");
-        var jwtToken = _authProvider.GenerateJsonWebToken(IDictionary<string, string> myClaims);
+        var jwtToken = _authProvider.GenerateJsonWebToken(myClaims);
     }
     public void Validate(string jwtToken){
         var keys = new List<string>();
         keys.Add("Id");
         keys.Add("Admin");
-        var myClaims = _authProvider.ValidateToken(string jwtToken, List<string> keys);
+        var myClaims = _authProvider.ValidateToken(jwtToken, keys);
         //myClaims is a Dictionary that holds your claims. It will be null if the token is expired or invalid. 
     }
 }
